@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="d01e92e6-93b0-4fc8-8567-2a0f5e23bc80" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="2r3DD0rQZlDXUkHW7bzRcDsFN25" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.exe001.executor": "Run",
+    "Python.exe002.executor": "Run",
+    "Python.exe003.executor": "Run",
+    "Python.exe004.executor": "Run",
+    "Python.exe020.executor": "Run",
+    "Python.exe021.executor": "Run",
+    "Python.exe022.executor": "Run",
+    "Python.exe023.executor": "Run",
+    "Python.exe024.executor": "Run",
+    "Python.exe025.executor": "Run",
+    "Python.exe026.executor": "Run",
+    "Python.exe027.executor": "Run",
+    "Python.exe028.executor": "Run",
+    "Python.exe029.executor": "Run",
+    "Python.exe030.executor": "Run",
+    "Python.exe031.executor": "Run",
+    "Python.exe032.executor": "Run",
+    "Python.exe033.executor": "Run",
+    "Python.exe034.executor": "Run",
+    "Python.exe035.executor": "Run",
+    "Python.exe036.executor": "Run",
+    "Python.exe037.executor": "Run",
+    "Python.exe038.executor": "Run",
+    "Python.exe039.executor": "Run",
+    "Python.exe040.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Users/kayke/OneDrive/PythonExercicios"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\kayke\OneDrive\PythonExercicios" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-495700d161d3-aa17d162503b-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-243.22562.220" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d01e92e6-93b0-4fc8-8567-2a0f5e23bc80" name="Changes" comment="" />
+      <created>1735778741844</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1735778741844</updated>
+    </task>
+    <servers />
+  </component>
+</project>
