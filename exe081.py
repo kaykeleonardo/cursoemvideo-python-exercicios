@@ -10,7 +10,7 @@ print('=-' * (len(lista) * 2))
 lista.sort()
 print(f'Lista digitada {lista}')
 print(f'Quantidade de numeros digitados: {qtde_num}')
-lista.sort(reverse= True)
+lista.sort(reverse=True)
 print(f'Valores de forma decrescente: {lista}''')
 if 5 in lista:
     print('O numero 5 foi digitado')

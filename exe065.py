@@ -1,5 +1,5 @@
 ask = ''
-maior = menor =  media = None
+maior = menor =  media = 0
 cont = 0
 soma = 0
 n = 0

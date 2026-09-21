@@ -18,3 +18,6 @@ print('=-' * 30)
 print(f'Lista padrão completa = {lista}')
 print(f'Lista par completa = {par}')
 print(f'Lista impar completa = {impar}')
+
+
+# Foi feita adicionando os itens nas listas posteriormente devido ao pedido do Guanabara, para aprendermos a manipular posteriormente.
