@@ -1,3 +1,4 @@
+from math import pi
 from abc import ABC,abstractmethod
 
 class Poligono(ABC):
@@ -9,18 +10,30 @@ class Poligono(ABC):
     def perimetro(self):
         pass
 
+    @abstractmethod
     def area(self):
         pass
 
 
 class Quadrado(Poligono):
-    def __init__(self, lado):
+    def __init__(self, lado = 1):
         super().__init__(4)
         self.lado = lado
 
     def perimetro(self):
-        return self.lado * self.qtd_lados
+        return f'{self.lado * self.qtd_lados:.2f}'
 
-q1 = Quadrado(12)
-print(q1.perimetro())
-#Exercicio nao concluido ainda...
+    def area(self):
+        return f'{self.lado ** 2:.2f}'
+
+class Circulo(Poligono):
+    def __init__(self, raio = 1):
+        super().__init__(0)
+        self.raio = raio
+
+    def perimetro(self):
+        return f'{2 * self.raio * pi:.2f}'
+
+    def area(self):
+        return f'{pi * (self.raio ** 2):.2f}'
+
