@@ -8,13 +8,16 @@ class Termostato():
 
     @temperatura.setter
     def temperatura(self, valor):
-        if (valor % 0.5 == 0):
-            if valor > 30:
-                self.__temperatura = 30
-            elif valor < 16:
-                self.__temperatura = 16
-            else:
-                self.__temperatura = valor
+        if valor % 0.5 != 0:
+            raise ValueError(f"Temperatura de {valor}°C é inválida!")
+        if valor > 30:
+            self.__temperatura = 30
+        elif valor < 16:
+            self.__temperatura = 16
+        else:
+            self.__temperatura = valor
+
+
 
     @property
     def ftemperatura(self):
