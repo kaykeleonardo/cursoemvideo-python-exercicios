@@ -1,6 +1,5 @@
 from abc import ABC, abstractmethod
 from datetime import date
-from rich import print, inspect
 
 class Pessoa(ABC):
     def __init__(self, nome:str, nascimento:int):
@@ -14,10 +13,9 @@ class Pessoa(ABC):
 
     @nascimento.setter
     def nascimento(self, ano:int):
-        if ano > date.today().year or ano < 1910 or not isinstance(ano, int):
-            print("Ano Invalido")
-        else:
-            self._nascimento = ano
+        if not isinstance(ano, int) or ano > date.today().year or ano < 1910:
+            raise ValueError("Ano Invalido")
+        self._nascimento = ano
 
     @property
     def idade(self):
@@ -28,10 +26,16 @@ class Pessoa(ABC):
     def idade(self, idade):
         raise PermissionError(f"Você não pode alterar a idade diretamente, somente o ano de nascimento.")
 
+    @abstractmethod
+    def exibir_dados(self):
+        pass
+
+    
 class Aluno(Pessoa):
+    cursos_oficiais = ['ADS', 'ES', 'CC', 'SI']
+
     def __init__(self, nome:str, nascimento:int, curso:str):
         super().__init__(nome, nascimento)
-        self.cursos_oficiais = ['ADS', 'ES', 'CC', 'SI']
         self._curso = None
         self.curso = curso
 
@@ -41,19 +45,25 @@ class Aluno(Pessoa):
 
     @curso.setter
     def curso(self, atual:str):
-        atual = atual.strip()
-        if len(atual) < 3 or len(atual) > 5:
-            print("Nome de curso invalido, tente novamente.")
-        else:
-            self._curso = atual
+        if not isinstance(atual, str):
+            raise TypeError("O curso deve ser um texto.")
+        atual_formatado = atual.strip().upper()
+        if atual_formatado not in self.cursos_oficiais:
+            raise ValueError(f"O curso {atual_formatado} não esta presente na lista de cursos.\nCursos disponiveis: {self.cursos_oficiais}")
+        self._curso = atual_formatado
 
     def add_curso(self, curso:str):
-        curso = curso.upper()
+        if not isinstance(curso, str):
+            raise TypeError("O nome do curso deve ser um texto.")
+        curso_formatado = curso.strip().upper()
 
-        if curso not in self.cursos_oficiais:
-            if 3 <= len(curso) <= 6 and isinstance(curso, str):
-                self.cursos_oficiais.append(curso) 
-            else:
-                print("Esse curso não pode ser adicionado.")
+        if not (3 <= len(curso_formatado) <= 6):
+            raise ValueError("O nome do curso deve ter entre 3 e 6 caracteres.") 
+
+        if curso_formatado not in self.cursos_oficiais:
+            self.cursos_oficiais.append(curso_formatado)
+
+    def exibir_dados(self):
+        return f"Aluno: {self._nome} | Idade: {self.idade} | Curso: {self.curso}"
     
 
