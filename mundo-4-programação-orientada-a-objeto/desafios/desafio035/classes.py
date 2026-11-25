@@ -1,5 +1,4 @@
-from abc import ABC
-
+from abc import ABC, abstractmethod
 class Arquivo(ABC):
     def __init__(self, nome:str, ext:str, tam:int):
         self.nome = nome
@@ -7,6 +6,7 @@ class Arquivo(ABC):
         self.tamanho = tam
         self.extensao = ext
 
+    @abstractmethod
     def abrir(self):
         pass
 
@@ -25,18 +25,18 @@ class Arquivo(ABC):
 
     @property
     def nome_completo(self):
-        return f"'{self.nome}.{self.extensao}' ({self.tamanho/1000}bytes)"
+        return f"'{self.nome}.{self.extensao}'({self.tamanho/1000000}mb)"
 
 class PDF(Arquivo):
-    def __init__(self, nome, ext, tam):
+    def __init__(self, nome, tam):
         super().__init__(nome, "pdf", tam)
 
     def abrir(self):
         print(f"Abrindo o arquivo {self.nome_completo} no Adobe Reader")
 
 class DOC(Arquivo):
-    def __init__(self, nome, ext, tam):
+    def __init__(self, nome, tam):
         super().__init__(nome, "doc", tam)
 
     def abrir(self):
-        print(f"Abrindo o arquivo {self.nome_completo} no Microsoft Word")
+        print(f"Abrindo o arquivo {self.nome_completo} no Microsoft Word") 
